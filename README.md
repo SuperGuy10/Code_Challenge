@@ -1,1 +1,9 @@
 # Code_Challenge
+# Coding Question 1
+An application that you are implementing requires multiple date formats to be transformed into one common date format. Implement the function ChangeDateFormat which accepts a list of strings, representing dates, and returns a new list with each date in the format YYYYMMDD. All incoming dates will be valid dates, but only those in one of the following formats: YYYY/MM/DD, DD/MM/YYYY and MM-DD-YYYY should be included in the returned list. For example, change_date_format(["2010/03/30", "15/12/2016", "11-15-2012", "20130720"]) should return the list ["20100330", "20161215", "20121115"].
+
+This question required to transform different date type into one specific type. Since the input is a list of string, I imported re module to split the string. To avoid empty string, I split it with "," and a space instead of just “,”. Considered it will be a file document in reality to transform, I decided to use file.read() to get the information. I selected “/” and “-” character as symbols combined with if statement to decide which format of date to return. It only asked to return the dates in the goal format, so I just delete those have same format as goal format.
+# Coding Question 2
+Give a data structure representing a social network, having a method named canBeConnected and implement it on class Friend. The method should check if a connection to the given member exists. That should be either a direct friendship or a chain of members between them who are mutual friends. For example, if A and B are friends and B and C are friends, then A.canBeConnected(C) should return true, since C is a friend of B and B is a friend of A.
+
+This question asked to select a data structure representing a social network. After considering about tree, linked list I decided to use Graph represent it. I take people as vertices, connections as edges and use path to find out two people can be connected or not. I used recursion to find path. 
